@@ -1,3 +1,9 @@
+import { GlobalStyles } from "./styles/GlobalStyles"
 export function App() {
-  return <h1>HELLO WORLD</h1>
+  return (
+    <>
+      <GlobalStyles/>
+      <h1>Hello world</h1>
+    </>
+  )
 }
