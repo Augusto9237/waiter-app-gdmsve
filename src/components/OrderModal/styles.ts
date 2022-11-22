@@ -23,6 +23,8 @@ export const ModalBody = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
 
     strong {
       font-size: 24px;
