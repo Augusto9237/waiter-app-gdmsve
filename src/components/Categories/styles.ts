@@ -5,7 +5,7 @@ export const CategoriesContainer = styled.div`
   gap: 12px;
 
   @media (max-width: 415px) {
-    padding: 5px 20px;
+    padding: 12px 20px;
     overflow: scroll;
   }
 `;

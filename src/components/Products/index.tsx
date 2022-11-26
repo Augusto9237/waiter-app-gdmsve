@@ -7,10 +7,10 @@ export function Products() {
     <ProductsContainer>
       {products.map((product) => {
         return (
-          <>
-            <ProductCard key={product._id} product={product} />
+          <div key={product._id}>
+            <ProductCard product={product} />
             <Separator />
-          </>
+          </div>
         );
       })}
     </ProductsContainer>
