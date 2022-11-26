@@ -11,6 +11,10 @@ export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 415px) {
+    padding: 0 20px;
+  }
 `;
 
 export const ModalBody = styled.div`
@@ -18,6 +22,10 @@ export const ModalBody = styled.div`
   width: 480px;
   border-radius: 8px;
   padding: 32px;
+
+  @media (max-width: 415px) {
+    padding: 22px;
+  }
 
   header {
     display: flex;
