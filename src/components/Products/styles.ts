@@ -9,3 +9,9 @@ export const ProductsContainer = styled.div`
     flex-direction: column;
   }
 `;
+
+export const Separator = styled.div`
+  height: 1px;
+  background: rgba(204, 204, 204, 0.3);
+  margin: 24px 0;
+`;
