@@ -50,6 +50,14 @@ export const OrdersContainer = styled.div`
 
     & + button {
       margin-top: 24px;
+
+      @media (max-width: 415px) {
+        margin-top: 16px;
+      }
+    }
+
+    @media (max-width: 415px) {
+      height: 100px;
     }
   }
 `;

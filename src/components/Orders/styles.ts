@@ -6,5 +6,13 @@ export const Container = styled.div`
   max-width: 1216px;
   margin: 40px auto;
   gap: 32px;
-`;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 40px;
+  }
+
+  @media (max-width: 415px) {
+    padding: 0 20px;
+  }
+`;
