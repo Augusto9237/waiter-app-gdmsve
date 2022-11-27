@@ -5,11 +5,18 @@ export const CartContainer = styled.div`
   width: 100%;
   justify-content: center;
   background: #ffffff;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  right: 0;
+  left: 0;
 
   min-height: 114px;
   padding: 24px;
+
+  @media (max-height: 415px) {
+    height: 80px;
+    min-height: 80px;
+  }
 `;
 
 export const CartContent = styled.div`

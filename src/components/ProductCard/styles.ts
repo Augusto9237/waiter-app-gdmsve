@@ -4,6 +4,18 @@ export const ProductCardContainer = styled.div`
   position: relative;
   display: flex;
   height: 98px;
+  padding: 12px 0px;
+  align-items: center;
+
+  :hover {
+    background: #fff;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 12px 0px;
+  }
 `;
 
 export const ProductImage = styled.button`
@@ -26,23 +38,27 @@ export const ProductDetails = styled.div`
   justify-content: center;
   padding: 0px;
   gap: 8px;
-  margin-left: 16px;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-left: 12px;
+  margin-right: 12px;
 
   span {
     font-weight: 400;
     font-size: 14px;
     color: #666666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (min-width: 450px) {
+    max-width: 199px;
   }
 `;
 
 export const ButtonAddProduct = styled.button`
   background: transparent;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 4px;
+  right: 4px;
   width: 24px;
   height: 24px;
   display: flex;

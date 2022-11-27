@@ -38,4 +38,13 @@ export const products = [
     price: 7,
     ingredients: [],
   },
+  {
+    _id: "k99ka9kja982959595484a8",
+    name: "Cerveja heineken",
+    description: "cerveja gelada",
+    imagePath:
+      "https://media.istockphoto.com/id/487787108/pt/foto/lata-de-coca-cola-com-gelo.jpg?s=1024x1024&w=is&k=20&c=7ytkYRo1LgXhlfWC20cOGWpgV2TzA1wQEAPevEbaSWI=",
+    price: 7,
+    ingredients: [],
+  },
 ];

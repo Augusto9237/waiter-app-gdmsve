@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin: 40px auto;
   gap: 32px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     flex-direction: column;
     padding: 0 40px;
   }
@@ -16,5 +16,8 @@ export const Container = styled.div`
   @media (max-width: 415px) {
     padding: 0 20px;
     margin: 20px auto;
+  }
+  @media (max-height: 415px) {
+    margin-bottom: 120px;
   }
 `;
