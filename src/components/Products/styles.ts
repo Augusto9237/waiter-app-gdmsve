@@ -10,10 +10,13 @@ export const ProductsContainer = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
     gap: 0;
+    margin-bottom: 80px;
+    overflow-y: scroll;
   }
 
   @media (max-width: 300px) {
     overflow-y: scroll;
+    margin-bottom: 80x;
   }
 `;
 

@@ -10,8 +10,8 @@ export const CartContainer = styled.div`
   right: 0;
   left: 0;
 
-  min-height: 114px;
-  padding: 24px;
+  min-height: 80px;
+  padding: 22px;
 
   @media (max-height: 415px) {
     height: 80px;
