@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-export const CategoryContainer = styled.button`
+export const CategoryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   background: none;
   border: none;
-  margin-left: 8px;
 `;
 
 export const Icon = styled.div`

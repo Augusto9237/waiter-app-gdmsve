@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Order } from "../../types/Order";
+import { Order } from "../../../types/Order";
 import { OrderModal } from "../OrderModal";
 import { Board, OrdersContainer } from "./styles";
 

@@ -1,5 +1,5 @@
 import { orders } from "../../mocks/orders";
-import { OrdersBoard } from "../OrdersBoard";
+import { OrdersBoard } from "./OrdersBoard";
 import { Container } from "./styles";
 
 export function Orders() {

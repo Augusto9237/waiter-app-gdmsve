@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Order } from "../../types/Order";
+import { Order } from "../../../types/Order";
 import { CartContainer, CartContent } from "./styles";
 
 interface CartProps {

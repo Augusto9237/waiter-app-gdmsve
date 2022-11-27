@@ -1,13 +1,13 @@
-import logo from "../../assets/images/logo.svg";
+import logo from "../../../assets/images/logo.svg";
 import { Container, Content } from "./styles";
 
-export function HeaderClient() {
+export function Header() {
   return (
     <Container>
       <Content>
         <div className="page-details">
-          <span>Bem-vindo(a) ao</span>
-          <h1>REST</h1>
+          <h1>Pedidos</h1>
+          <h2>Acompanhe os pedidos dos clientes</h2>
         </div>
 
         <img src={logo} alt="waiterapp" />

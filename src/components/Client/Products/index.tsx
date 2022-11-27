@@ -1,4 +1,4 @@
-import { products } from "../../mocks/products";
+import { products } from "../../../mocks/products";
 import { ProductCard } from "../ProductCard";
 import { ProductsContainer, Separator } from "./styles";
 

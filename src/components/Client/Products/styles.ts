@@ -4,12 +4,12 @@ export const ProductsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
   flex: 1;
-  gap: 32px;
+  gap: 24px;
 
   @media (max-width: 600px) {
     flex-direction: column;
-    gap: 0;
     margin-bottom: 80px;
     overflow-y: scroll;
   }
