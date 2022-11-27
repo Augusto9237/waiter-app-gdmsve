@@ -15,7 +15,7 @@ export function Cart() {
           <h1>R$ 00</h1>
         </span>
 
-        <button>Carrinho</button>
+        <button>Confirmar pedido</button>
       </CartContent>
     </CartContainer>
   );
