@@ -11,13 +11,18 @@ import {
 interface ProductCardProps {
   product: null | ProductType;
   onAddToCart: (product: ProductType) => void;
+  onOpenModal: (product: ProductType) => void;
 }
 
-export function ProductCard({ product, onAddToCart }: ProductCardProps) {
+export function ProductCard({
+  product,
+  onAddToCart,
+  onOpenModal,
+}: ProductCardProps) {
   return (
     <>
       <ProductCardContainer>
-        <ProductImage>
+        <ProductImage onClick={() => onOpenModal(product!)}>
           <img src={product?.imagePath} alt={product?.name} />
         </ProductImage>
 

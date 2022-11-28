@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductCardContainer = styled.button`
+export const ProductCardContainer = styled.div`
   border: none;
   background: none;
   position: relative;
