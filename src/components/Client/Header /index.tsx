@@ -17,11 +17,19 @@ export function HeaderClient({ selectedTable, onCancelOrder }: HeaderProps) {
               <h1>REST</h1>
             </>
           )}
-          {selectedTable && <h1>Pedido</h1>}
+          {selectedTable && (
+            <div>
+              <h1>Pedido</h1>
+              <span>Mesa:{' '}{selectedTable}</span>
+              <span>Atendente:</span>
+            </div>
+          )}
         </div>
         {!selectedTable && <img src={logo} alt="waiterapp" />}
         {selectedTable && (
-          <button onClick={onCancelOrder}>Cancelar Pedido</button>
+          <button onClick={onCancelOrder}>
+            <span>cancelar pedido</span>
+          </button>
         )}
       </Content>
     </Container>

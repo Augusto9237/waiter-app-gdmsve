@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ImageProps {
+  image: string;
+}
+
 export const Overlay = styled.div`
   z-index: 10;
   left: 0px;
@@ -26,7 +30,7 @@ export const ModalBody = styled.div`
   overflow: hidden;
 `;
 
-export const ImageProduct = styled.div`
+export const ImageProduct = styled.div<ImageProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-end;

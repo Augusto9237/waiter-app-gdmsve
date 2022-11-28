@@ -28,13 +28,8 @@ export function ProductModal({
   product,
   onAddToCart,
 }: ProductModalProps) {
-  if (!product) {
+  if (!visible || !product) {
     return null;
-  }
-
-  function handleAddToCart() {
-    onAddToCart(product!);
-    onClose();
   }
 
   useEffect(() => {
@@ -50,6 +45,11 @@ export function ProductModal({
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [onClose]);
+
+  function handleAddToCart() {
+    onAddToCart(product!);
+    onClose();
+  }
 
   return (
     <Overlay>

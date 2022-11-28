@@ -52,6 +52,20 @@ export const Content = styled.div`
       width: 190px;
     }
   }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    background: #999999;
+    border-radius: 48px;
+    border: none;
+
+    span {
+      color: #d73035;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
 `;
-
-
