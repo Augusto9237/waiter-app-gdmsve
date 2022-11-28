@@ -25,7 +25,9 @@ export const CartContent = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1216px;
+
   .Cart-total {
+    flex: 1;
     font-weight: 400;
     font-size: 16px;
     color: #666666;
@@ -39,6 +41,7 @@ export const CartContent = styled.div`
   }
 
   button {
+    flex: 1;
     border: none;
     background: #d73035;
     color: #ffffff;

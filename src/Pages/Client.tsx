@@ -80,8 +80,14 @@ export function ClientPage() {
         selectedTable={selectedTable}
         onCancelOrder={handleResetOrder}
       />
-      <Client />
-      <Cart />
+      <Client onAddToCart={handleAddToCart} />
+      <Cart
+        selectedTable={selectedTable}
+        onAdd={handleAddToCart}
+        onDecrement={handleDecrementCartItem}
+        cartItems={cartItems}
+        onConfirmOrder={handleResetOrder}
+      />
     </>
   );
 }

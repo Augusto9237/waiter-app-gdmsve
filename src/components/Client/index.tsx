@@ -1,13 +1,30 @@
+import { products } from "../../mocks/products";
+import { ProductType } from "../../types/Products";
 import { Categories } from "./Categories";
+import { ProductCard } from "./ProductCard";
 import { Products } from "./Products";
 
-import { Container } from "./styles";
+import { Container, ProductsContainer } from "./styles";
 
-export function Client() {
+interface ClientProps {
+  onAddToCart: (product: ProductType) => void;
+}
+
+export function Client({ onAddToCart }: ClientProps) {
   return (
     <Container>
       <Categories />
-      <Products />
+      <ProductsContainer>
+        {products.map((product) => {
+          return (
+            <ProductCard
+              product={product}
+              key={product._id}
+              onAddToCart={onAddToCart}
+            />
+          );
+        })}
+      </ProductsContainer>
     </Container>
   );
 }

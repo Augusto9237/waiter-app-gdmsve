@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const ProductCardContainer = styled.div`
+export const ProductCardContainer = styled.button`
+  border: none;
+  background: none;
   position: relative;
   display: flex;
   height: 98px;
@@ -71,4 +73,12 @@ export const ButtonAddProduct = styled.button`
   border-radius: 12px;
   border: 2px solid #d73035;
   color: #d73035;
+`;
+
+export const Separator = styled.div`
+  @media (max-width: 600px) {
+    height: 1px;
+    background: rgba(204, 204, 204, 0.3);
+    margin: 22px 0;
+  }
 `;
