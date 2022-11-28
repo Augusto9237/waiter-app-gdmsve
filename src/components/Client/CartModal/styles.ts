@@ -4,7 +4,7 @@ interface ImageProps {
   image: string;
 }
 
-export const Overlay = styled.div`
+export const OverlayCartModal = styled.div`
   z-index: 50;
   flex: 1;
   left: 0px;
@@ -24,24 +24,12 @@ export const Overlay = styled.div`
   }
 `;
 
-export const ModalBody = styled.div`
+export const ModalBodyCart = styled.div`
   position: relative;
   background: #fff;
   width: 480px;
   border-radius: 8px;
   overflow: hidden;
-`;
-
-export const ImageProduct = styled.div<ImageProps>`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  overflow: hidden;
-  height: 200px;
-  width: 100%;
-  background-image: url(${(props) => props.image});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
 
 export const ButtonCloseModal = styled.button`
@@ -78,29 +66,7 @@ export const ModalContent = styled.div`
   }
 `;
 
-export const IngredientsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 32px;
-
-  h4 {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
-`;
-
-export const IngredientItem = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 16px;
-  border: 1px solid rgba(204, 204, 204, 0.3);
-  border-radius: 8px;
-  margin-bottom: 4px;
-`;
-
-export const Footer = styled.div`
+export const FooterCart = styled.div`
   display: flex;
   min-height: 110px;
   background: #fff;

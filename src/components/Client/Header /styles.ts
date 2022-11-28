@@ -58,7 +58,7 @@ export const Content = styled.div`
     justify-content: center;
     align-items: center;
     padding: 8px 12px;
-    background: #999999;
+    background: #99999;
     border-radius: 48px;
     border: none;
 
@@ -67,5 +67,20 @@ export const Content = styled.div`
       font-weight: 600;
       font-size: 16px;
     }
+  }
+`;
+
+export const ContentHeaderClient = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h1{
+    margin-bottom: 4px;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 70%;
   }
 `;

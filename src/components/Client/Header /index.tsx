@@ -1,5 +1,5 @@
 import logo from "../../../assets/images/logo.svg";
-import { Container, Content } from "./styles";
+import { Container, Content, ContentHeaderClient } from "./styles";
 
 interface HeaderProps {
   selectedTable: string;
@@ -18,11 +18,11 @@ export function HeaderClient({ selectedTable, onCancelOrder }: HeaderProps) {
             </>
           )}
           {selectedTable && (
-            <div>
+            <ContentHeaderClient>
               <h1>Pedido</h1>
-              <span>Mesa:{' '}{selectedTable}</span>
+              <span>Mesa: {selectedTable}</span>
               <span>Atendente:</span>
-            </div>
+            </ContentHeaderClient>
           )}
         </div>
         {!selectedTable && <img src={logo} alt="waiterapp" />}
