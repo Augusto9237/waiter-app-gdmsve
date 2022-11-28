@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import closeIcon from "../../../assets/images/close-icon.svg";
+import { CartItem } from "../../../types/CartItem";
 import { ProductType } from "../../../types/Products";
 import { formatCurrency } from "../../../utils/formatCurrency";
 
@@ -12,20 +13,16 @@ import {
   PriceContainer,
 } from "./styles";
 
-interface ProductModalProps {
+interface CartModalProps {
   visible: boolean;
+  cartItems: CartItem[];
   onClose: () => void;
   product: null | ProductType;
   onAddToCart: (product: ProductType) => void;
 }
 
-export function CartModal({
-  visible,
-  onClose,
-  product,
-  onAddToCart,
-}: ProductModalProps) {
-  if (!visible || !product) {
+export function CartModal({ visible, onClose, cartItems }: CartModalProps) {
+  if (!visible) {
     return null;
   }
 
@@ -43,10 +40,9 @@ export function CartModal({
     };
   }, [onClose]);
 
-  function handleAddToCart() {
-    onAddToCart(product!);
-    onClose();
-  }
+  const total = cartItems.reduce((acc, cartItem) => {
+    return acc + cartItem.quantity * cartItem.product.price;
+  }, 0);
 
   return (
     <OverlayCartModal>
@@ -55,10 +51,10 @@ export function CartModal({
         <FooterCart>
           <PriceContainer>
             <span>Total</span>
-            <strong>{formatCurrency(product.price)}</strong>
+            <strong>{formatCurrency(total)}</strong>
           </PriceContainer>
 
-          <button onClick={handleAddToCart}>Confirmar pedido</button>
+          <button onClick={onClose}>Confirmar pedido</button>
         </FooterCart>
       </ModalBodyCart>
     </OverlayCartModal>
