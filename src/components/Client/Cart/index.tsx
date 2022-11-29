@@ -36,8 +36,8 @@ export function Cart({
         onClose={() => setIsModalVisible(false)}
         cartItems={cartItems}
         visible={isModalVisible}
-        onAdd
-        onDecrement
+        onAdd={onAdd}
+        onDecrement={onDecrement}
       />
       <CartContainer>
         <CartContent>

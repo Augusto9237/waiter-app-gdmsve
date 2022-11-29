@@ -11,17 +11,30 @@ import {
   OverlayCartModal,
   FooterCart,
   PriceContainer,
+  Item,
+  ProductContainer,
+  QuantityContainer,
+  ProductDetails,
+  Actions,
+  ImageItem,
+  HeaderModalCart,
 } from "./styles";
 
 interface CartModalProps {
   visible: boolean;
   cartItems: CartItem[];
   onClose: () => void;
-  product: null | ProductType;
-  onAddToCart: (product: ProductType) => void;
+  onAdd: (product: ProductType) => void;
+  onDecrement: (product: ProductType) => void;
 }
 
-export function CartModal({ visible, onClose, cartItems }: CartModalProps) {
+export function CartModal({
+  visible,
+  onClose,
+  cartItems,
+  onAdd,
+  onDecrement,
+}: CartModalProps) {
   if (!visible) {
     return null;
   }
@@ -47,7 +60,48 @@ export function CartModal({ visible, onClose, cartItems }: CartModalProps) {
   return (
     <OverlayCartModal>
       <ModalBodyCart>
-        <ModalContent></ModalContent>
+        <HeaderModalCart>
+          <div />
+          <strong>Itens do Pedido</strong>
+
+          <button type="button" onClick={onClose}>
+            <img src={closeIcon} alt="Icone de fechar" />
+          </button>
+        </HeaderModalCart>
+        <ModalContent>
+          {cartItems.map((cartItem) => (
+            <>
+              <Item>
+                <ProductContainer>
+                  <ImageItem>
+                    <img src={cartItem.product.imagePath} />
+                  </ImageItem>
+                  <QuantityContainer>
+                    <span>{cartItem.quantity}x</span>
+                  </QuantityContainer>
+
+                  <ProductDetails>
+                    <strong>{cartItem.product.name}</strong>
+                    <span>{formatCurrency(cartItem.product.price)}</span>
+                  </ProductDetails>
+                </ProductContainer>
+
+                <Actions>
+                  <button type="button" onClick={() => onAdd(cartItem.product)}>
+                    <span>+</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => onDecrement(cartItem.product)}
+                  >
+                    <span>-</span>
+                  </button>
+                </Actions>
+              </Item>
+            </>
+          ))}
+        </ModalContent>
         <FooterCart>
           <PriceContainer>
             <span>Total</span>
